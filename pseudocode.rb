@@ -1,3 +1,4 @@
+
 =begin
 pseudocode:
 Send a welcome message and prompt for an input
