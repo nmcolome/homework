@@ -44,3 +44,5 @@ my_second_car.wheel_count = 2
 puts "This sweet ride is sitting on #{my_second_car.wheel_count} wheels"
 
 my_car.start
+my_car.start
+my_second_car.start
