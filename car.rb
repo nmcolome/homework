@@ -1,12 +1,14 @@
 class Car
     
-    attr_accessor :color, :wheel_count
-    
-    def initialize (start, color, wheel_count)
-        @start          = start
+    attr_accessor :color, :wheel_count, :started
+    started = false
+
+    def initialize (color, wheel_count, started)
+        @started        = started
         @color          = color
         @wheel_count    = wheel_count
     end
+
 
     def horn
         "BEEEEEP!"
@@ -21,9 +23,9 @@ class Car
     end
 
     def start
-        if start == false
+        if started == false
             puts "Starting up!"
-            start = true
+            @started = true
         else puts "BZZT! Nice try, though."
         end
     end
@@ -31,7 +33,7 @@ class Car
 end
 
 
-my_car = Car.new(false, "red", 18)
+my_car = Car.new("red", 18, false)
 puts my_car.horn
 puts my_car.drive(12)
 my_car.color = "purple"
@@ -39,10 +41,11 @@ puts my_car.report_color
 my_car.wheel_count = 18
 puts "This sweet ride is sitting on #{my_car.wheel_count} wheels"
 
-my_second_car = Car.new(false,"red",18)
+my_second_car = Car.new("red",18,false)
 my_second_car.wheel_count = 2
 puts "This sweet ride is sitting on #{my_second_car.wheel_count} wheels"
 
 my_car.start
 my_car.start
+my_second_car.start
 my_second_car.start
