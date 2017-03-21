@@ -1,10 +1,9 @@
 class Car
     
     attr_accessor :color, :wheel_count, :started
-    started = false
 
-    def initialize (color, wheel_count, started)
-        @started        = started
+    def initialize (color, wheel_count)
+        @started        = false
         @color          = color
         @wheel_count    = wheel_count
     end
