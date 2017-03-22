@@ -1,6 +1,6 @@
 class Car
     
-    attr_accessor :color, :wheel_count, :started
+    attr_reader :color, :wheel_count, :started
 
     def initialize (color, wheel_count)
         @started        = false
@@ -22,7 +22,7 @@ class Car
     end
 
     def start
-        if started == false
+        if @started == false
             puts "Starting up!"
             @started = true
         else puts "BZZT! Nice try, though."
